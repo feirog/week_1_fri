@@ -18,7 +18,7 @@ df$skin_sores = as.integer(substr(df$skin_sores_d6,1,1))
 
 df$severity_score <- df$gum_rot + df$skin_sores
 
-ggplot(data=df, aes(x=treatment, y=severity_score)) +
+ggplot(data=df, aes(x=treatment, y=severity_score, fill=treatment)) +
   geom_bar(stat='identity')
 
 ggplot(data=df, aes(x=treatment, y=fit_for_duty)) +
